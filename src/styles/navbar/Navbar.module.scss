@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.navbar {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+
+  .navbar_content {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      width: 10%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      
+      .nav_btn {
+        background: #f2bff9;
+        border: 0;
+        border-radius: 20px;
+        padding: 12px 25px;
+        color: black;
+        font-weight: 600;
+        font-family: 'Urbanist';
+      }
+
+      .nav_btn:hover {
+        background-color: #1B1850;
+        color: white;
+        transition-duration: 0.4s;
+      }
+
+      .navigation_content {
+        ul {
+          list-style-type: none;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        li{
+          margin-left: 30px;
+        }
+
+        a {
+          text-decoration: none;
+          color: black;
+          font-family: 'Urbanist';
+          font-weight: 600;
+        }
+  
+        a:hover {
+          color: #f1598f;
+        }
+      }
+    }
+
+    .dropdown {
+      position: relative;
+
+      .dropdown_toggle {
+        cursor: pointer;
+      }
+
+      .dropdown_menu {
+        position: absolute;
+        top: 30px; /* Aligns the menu directly below the toggle */
+        left: -10px; /* Aligns the menu with the toggle */
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        background-color: white; /* Add background color for visibility */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        border: 1px solid #ddd; /* Light border for better visibility */
+        padding: 0px 0px;
+        min-width: 180px;
+        z-index: 1;
+
+        li {
+          margin: 0;
+          min-width: 180px;
+        }
+
+        li a {
+          padding: 10px;
+          text-align: left;
+          display: block; /* Ensure full clickable area */
+        }
+
+        li a:hover {
+          background-color: #EFF3FF;
+          color: black;
+
+          // border-radius: 8px;
+        }
+      }
+
+      &.show .dropdown_menu {
+        display: flex; /* Show menu when dropdown is active */
+      }
+    }
+
+    .menuIcon {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+// Medium screens (tablets, smaller laptops)
+@media (max-width: 1024px) {
+  .navbar {
+    width: 80%;
+    height: 15vh;
+
+    img {
+      width: 12%;
+    }
+
+    .navigation {
+      gap: 15px;
+      display: none;
+      
+      &.active {
+        display: flex; /* Show when active (for toggle menu) */
+      }
+
+      a {
+        font-size: 0.9rem;
+      }
+
+      .nav_btn {
+        padding: 10px 20px;
+      }
+    }
+    
+    .menuIcon {
+      display: block; /* Show menu icon on small screens */
+    }
+  }
+}
+
+// Small screens (mobile devices)
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%;
+    height: auto;
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+
+    img {
+      width: 20%;
+      margin-bottom: 10px;
+    }
+
+    .navigation {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      display: none; /* Hide navigation on small screens */
+
+      &.active {
+        display: flex; /* Show when active (for toggle menu) */
+      }
+
+      a {
+        font-size: 0.85rem;
+      }
+
+      .nav_btn {
+        padding: 8px 15px;
+      }
+    }
+
+    .menuIcon {
+      display: block; /* Show menu icon on small screens */
+    }
+  }
+}
+
+// Extra small screens (very small mobile devices)
+@media (max-width: 480px) {
+  .navbar {
+    width: 100%;
+
+    img {
+      width: 25%;
+    }
+
+    .navigation {
+      a {
+        font-size: 0.8rem;
+      }
+
+      .nav_btn {
+        padding: 7px 12px;
+      }
+    }
+  }
+}
