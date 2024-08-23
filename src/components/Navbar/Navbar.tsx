@@ -28,7 +28,11 @@ export function Navbar() {
                     <img src={Logo} alt="Beresin" />
                     <div className={navbar.navigation}>
                         <div className={navbar.menuIcon} onClick={toggleMenu}>
-                            &#9776;
+                            {isMenuOpen ? ( 
+                                <span>&times;</span>
+                            ):(
+                                <span>&#9776;</span>
+                            )}
                         </div>
                         <div className={`${navbar.navigation_content}`}>
                             <ul>
