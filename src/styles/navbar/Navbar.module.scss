@@ -192,6 +192,10 @@
 
       .dropdown_toggle {
         cursor: pointer;
+        i{
+          float: right;
+          padding-right: 30px;
+        }
       }
 
       .dropdown_menu {
