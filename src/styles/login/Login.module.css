@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Urbanist";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  overflow: hidden;
+}
+.login-container .login-image img {
+  width: 100%;
+  height: 100vh;
+}
+.login-container .login-details {
+  display: flex;
+  justify-content: center;
+}
+.login-container .login-details .login-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 501px;
+}
+.login-container .login-details .login-details-wrapper h1 {
+  margin: 50px 0;
+}
+.login-container .login-details .login-details-wrapper .login-btn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 15px 102px;
+  width: 100%;
+  border-radius: 25px;
+  border: 1px solid lightgray;
+  margin: 15px 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Urbanist";
+}
+.login-container .login-details .login-details-wrapper .login-btn img {
+  width: 25px;
+}
+.login-container .login-details .login-details-wrapper .login-btn-email {
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 25px;
+  background-color: #1f1a4f;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+}
+.login-container .login-details .login-details-wrapper .border {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.5;
+}
+.login-container .login-details .login-details-wrapper .border span {
+  border: 0.1rem solid black;
+  height: 0;
+  width: 35%;
+  opacity: 0.2;
+}
+.login-container .login-details .login-details-wrapper .login-text {
+  text-align: center;
+  opacity: 0.5;
+}
+.login-container .login-details .login-details-wrapper .login-text :nth-child(1) {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 26px;
+}
+.login-container .login-details .login-details-wrapper .login-text :nth-child(2) {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+}
+.login-container .login-details .login-details-wrapper .input-field .label-forgot {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-container .login-details .login-details-wrapper .input-field .label-forgot p {
+  cursor: pointer;
+  font-weight: 700;
+}
+.login-container .login-details .login-details-wrapper .input-field label {
+  font-weight: 700;
+  font-size: 18px;
+}
+.login-container .login-details .login-details-wrapper .input-field .input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  font-weight: 700;
+  font-size: 16px;
+  outline: none;
+}
+.login-container .login-details .login-details-wrapper .input-field .input:focus {
+  border: 2px solid rgb(251, 158, 173);
+  filter: drop-shadow(0 0 0.3rem rgb(255, 192, 203));
+}
+
+.active {
+  display: none;
+}/*# sourceMappingURL=Login.module.css.map */

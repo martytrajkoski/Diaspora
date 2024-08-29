@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Urbanist";
+}
+
+.navbar {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+.navbar .navbar_content {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .navbar_content img {
+  width: 10%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.navbar .navbar_content .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.navbar .navbar_content .navigation .nav_btn {
+  background: #f2bff9;
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 25px;
+  color: black;
+  font-weight: 600;
+  font-family: "Urbanist";
+}
+.navbar .navbar_content .navigation .nav_btn:hover {
+  background-color: #1B1850;
+  color: white;
+  transition-duration: 0.4s;
+}
+.navbar .navbar_content .navigation .navigation_content ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .navbar_content .navigation .navigation_content li {
+  margin-left: 30px;
+}
+.navbar .navbar_content .navigation .navigation_content a {
+  text-decoration: none;
+  color: black;
+  font-family: "Urbanist";
+  font-weight: 600;
+  padding: 15px 10px;
+}
+.navbar .navbar_content .navigation .navigation_content a:hover {
+  color: #f1598f;
+}
+.navbar .navbar_content .navigation .menuIcon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.navbar .navbar_content .dropdown {
+  position: relative;
+}
+.navbar .navbar_content .dropdown .dropdown_toggle {
+  cursor: pointer;
+}
+.navbar .navbar_content .dropdown .dropdown_menu {
+  position: absolute;
+  top: 25px;
+  left: -10px;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  border: 0.02em solid #ddd;
+  padding: 0px 0px;
+  min-width: 180px;
+  z-index: 1;
+}
+.navbar .navbar_content .dropdown .dropdown_menu li {
+  margin: 0;
+  min-width: 180px;
+  border-bottom: 1px solid #bbb;
+}
+.navbar .navbar_content .dropdown .dropdown_menu li a {
+  padding: 10px;
+  text-align: left;
+  display: block;
+}
+.navbar .navbar_content .dropdown .dropdown_menu li a:hover {
+  background-color: #EFF3FF;
+  color: black;
+}
+.navbar .navbar_content .dropdown .dropdown_menu li:last-child {
+  border-bottom: none;
+}
+.navbar .navbar_content .dropdown.show .dropdown_menu {
+  display: flex;
+}
+
+.navigation_content_mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar .navbar_content {
+    width: 100%;
+  }
+  .navbar .navbar_content img {
+    width: 15%;
+  }
+  .navbar .navbar_content .navigation .menuIcon {
+    display: block;
+  }
+  .navbar .navbar_content .navigation .navigation_content {
+    display: none;
+  }
+  .navigation_content_mobile {
+    display: none;
+    width: 100%;
+  }
+  .navigation_content_mobile.active {
+    display: flex;
+  }
+  .navigation_content_mobile ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 0px;
+  }
+  .navigation_content_mobile ul li {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bbb;
+  }
+  .navigation_content_mobile ul li:last-child {
+    border-bottom: none;
+  }
+  .navigation_content_mobile a {
+    font-family: "Urbanist";
+    font-weight: 600;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: black;
+  }
+  .navigation_content_mobile a:hover {
+    color: #f1598f;
+  }
+  .navigation_content_mobile .nav_btn {
+    padding: 10px 20px;
+  }
+  .navigation_content_mobile .dropdown {
+    position: relative;
+  }
+  .navigation_content_mobile .dropdown .dropdown_toggle {
+    cursor: pointer;
+  }
+  .navigation_content_mobile .dropdown .dropdown_toggle i {
+    float: right;
+    padding-right: 30px;
+  }
+  .navigation_content_mobile .dropdown .dropdown_menu {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    min-width: 180px;
+    z-index: 1;
+  }
+  .navigation_content_mobile .dropdown .dropdown_menu li {
+    margin: 0;
+    padding: 0px 20px;
+    min-width: 180px;
+    border: 0px;
+  }
+  .navigation_content_mobile .dropdown .dropdown_menu li a {
+    text-align: left;
+    display: block;
+  }
+  .navigation_content_mobile .dropdown .dropdown_menu li a:hover {
+    background-color: #EFF3FF;
+    color: black;
+  }
+  .navigation_content_mobile .dropdown.show .dropdown_menu {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar .navbar_content img {
+    width: 22%;
+    margin-bottom: 10px;
+  }
+  .navbar .nav_btn {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    width: 100%;
+  }
+  .navbar .navbar_content img {
+    width: 30%;
+  }
+}/*# sourceMappingURL=Navbar.module.css.map */
