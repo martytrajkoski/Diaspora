@@ -1,13 +1,14 @@
 type ButtonProps = {
     title: string;
     className: string;
-    handleClick: ()=>void
+    image? : string ;
+    handleClick?: ()=>void
 }
 
-export function Button({title, className, handleClick}:ButtonProps ){
+export function Button({title, className,image,handleClick}:ButtonProps ){
     return(
         <button className={className} onClick={handleClick}>
-            {title}
+           <img src={image} alt="" /> {title}
         </button>
     )
 }
