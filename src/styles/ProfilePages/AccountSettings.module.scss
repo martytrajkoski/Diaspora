@@ -1,0 +1,11 @@
+.profile_custom_user{
+    width: 60%;
+    margin: auto;
+
+    .buttonsContent{
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+}
